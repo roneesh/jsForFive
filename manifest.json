@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "Turn on JavaScript for 5 minutes",
+  "description": "This extension enables JavaScript for 5 minutes while you do an important transaction, and disables it again after 5 minutes",
+  "version": "1.0",
+  "homepage_url" : "https://github.com/roneesh/jsForFive",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "jsForFive.html"
+  },
+  "permissions" : [ 
+      "tabs",
+      "contentSettings",
+      "storage"
+    ]
+}

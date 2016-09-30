@@ -1,0 +1,16 @@
+{
+  "name": "jsforfive",
+  "version": "1.0.0",
+  "description": "A Chrome extension that turns on JavaScript for 5 minutes",
+  "main": "jsForFive.js",
+  "scripts": {},
+  "keywords": [
+    "Chrome",
+    "Extension"
+  ],
+  "author": "Roneesh Vashisht",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^1.13.2"
+  }
+}

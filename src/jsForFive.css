@@ -1,0 +1,66 @@
+/* Extension html page styles */
+body {
+  font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+  font-size: 100%;
+  width: 600px;
+  background-color: #f5da55;
+  color: #323330;
+  padding: 0 15px;
+  height: auto;
+  box-sizing: border-box;
+  border: 5px solid black;
+}
+
+/* Heading and Subheading */
+h1 {
+  margin-top: 5px;
+}
+
+/* Options Drop Down */
+.more-list {
+  padding: 5px 5px 0 0;
+  position: absolute;
+  top: 13px;
+  right: 20px;
+  font-size: 12px;
+  text-align: right;
+}
+hr {
+  visibility: hidden;
+  margin: 2px;
+}
+.more-list a, .more-list a:visited {
+  color: #323330;
+}
+
+/* Toggle Switch CSS */
+.toggle-switch {
+  display: block;
+  width: 70px;
+  height: 40px;
+  background-color: #eee;
+  border-radius: 40px;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+#checkbox {
+  visibility: hidden;  
+}
+
+.dot {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 30px;
+  position: relative;
+  left: 0;
+  bottom: 15px;
+  transition-property: left, background-color;
+  transition-duration: 1s;
+}
+
+#checkbox:checked ~ .dot {
+  left: 40px;
+  background-color: green;
+}
