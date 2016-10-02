@@ -54,18 +54,108 @@
 	var React = __webpack_require__(2);
 	var ReactDOM = __webpack_require__(35);
 
-	var HelloWorld = React.createClass({
-	  displayName: 'HelloWorld',
+	var Heading = React.createClass({
+	  displayName: 'Heading',
+
+	  render: function () {
+	    var status = 'ENABLED';
+	    message = 'Surf cautiously!';
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        'h1',
+	        null,
+	        'Your JavaScript is ',
+	        status
+	      ),
+	      React.createElement(
+	        'p',
+	        null,
+	        ' ',
+	        message
+	      )
+	    );
+	  }
+	});
+
+	var DisableOption = React.createClass({
+	  displayName: 'DisableOption',
 
 	  render: function () {
 	    return React.createElement(
 	      'div',
 	      null,
-	      'Hello World!'
+	      React.createElement('input', { type: 'checkbox', id: 'disable-option' }),
+	      React.createElement(
+	        'label',
+	        { htmlFor: 'disable-option' },
+	        'Auto-Disable JavaScript after 5 minutes'
+	      )
 	    );
 	  }
 	});
-	ReactDOM.render(React.createElement(HelloWorld, null), document.getElementById('extension'));
+
+	var Switch = React.createClass({
+	  displayName: 'Switch',
+
+	  render: function () {
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        'label',
+	        { htmlFor: 'checkbox', className: 'toggle-switch' },
+	        React.createElement('input', { id: 'checkbox', type: 'checkbox' }),
+	        React.createElement('div', { className: 'dot' })
+	      ),
+	      React.createElement('p', { id: 'count-down' })
+	    );
+	  }
+	});
+
+	var Links = React.createClass({
+	  displayName: 'Links',
+
+	  render: function () {
+	    return React.createElement(
+	      'div',
+	      { className: 'links' },
+	      React.createElement(
+	        'a',
+	        { className: 'link', href: 'http://www.github.com/ronesh/jsForFive/faq.md' },
+	        'FAQ'
+	      ),
+	      React.createElement(
+	        'a',
+	        { className: 'link', href: 'http://www.github.com/roneesh/jsForFive' },
+	        'Source Code'
+	      ),
+	      React.createElement(
+	        'a',
+	        { className: 'link', href: 'chrome://extensions' },
+	        'Uninstall'
+	      )
+	    );
+	  }
+	});
+
+	var JSForFive = React.createClass({
+	  displayName: 'JSForFive',
+
+	  render: function () {
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(Heading, null),
+	      React.createElement(Switch, null),
+	      React.createElement(DisableOption, null),
+	      React.createElement(Links, null)
+	    );
+	  }
+	});
+
+	ReactDOM.render(React.createElement(JSForFive, null), document.getElementById('extension'));
 
 /***/ },
 /* 2 */
